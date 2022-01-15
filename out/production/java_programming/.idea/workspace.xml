@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/491416bb-7b78-41c8-b770-fca1fa07f198.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/491416bb-7b78-41c8-b770-fca1fa07f198.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Array/sum_of_first_and_last_digit_of_Array_elements.java" beforeDir="false" afterPath="$PROJECT_DIR$/Array/sum_of_first_and_last_digit_of_Array_elements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_programming/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_programming/.idea/dataSources/491416bb-7b78-41c8-b770-fca1fa07f198.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_programming/.idea/dataSources/491416bb-7b78-41c8-b770-fca1fa07f198.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java_programming/Array/sum_of_first_and_last_digit_of_Array_elements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_programming/Array/sum_of_first_and_last_digit_of_Array_elements.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +189,6 @@
       <workItem from="1642159639832" duration="1853000" />
       <workItem from="1642166223957" duration="607000" />
       <workItem from="1642175272431" duration="4814000" />
-      <workItem from="1642256236004" duration="1355000" />
     </task>
     <task id="LOCAL-00001" summary="initial or modify commit">
       <created>1637398078095</created>
