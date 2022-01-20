@@ -1,6 +1,7 @@
 package Data_structure_and_algorithm;
 
 import java.io.*;
+import java.util.Scanner;
 
 // Java program to implement a Singly Linked List
 
@@ -29,7 +30,7 @@ public class LinkedList {
     {
         // Create a new node with given data
         Node new_node = new Node(data);
-        new_node.next = null;
+        //new_node.next = null;       - not compulsory
 
         // If the Linked List is empty,
         // then make the new node as head
@@ -80,15 +81,13 @@ public class LinkedList {
         //
 
         // Insert the values
-        list = insert(list, 1);
-        list = insert(list, 2);
-        list = insert(list, 3);
-        list = insert(list, 4);
-        list = insert(list, 5);
-        list = insert(list, 6);
-        list = insert(list, 7);
-        list = insert(list, 8);
-
+        System.out.println("Enter the size of list");
+        int size = new Scanner(System.in).nextInt();
+        System.out.println("Enter the Elements");
+        for(int i=0;i<size;i++)
+        {
+            list = insert(list, new Scanner(System.in).nextInt());
+        }
         // Print the LinkedList
         printList(list);
     }
