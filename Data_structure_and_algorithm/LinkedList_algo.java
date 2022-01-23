@@ -46,7 +46,12 @@ public class LinkedList_algo
         {
             list.Head = list.Head.next;
         }
-        if(last.value==key)
+        else if(f==0 && last.value==key)
+        {
+            list.Head = null;
+            System.out.println(key + " is deleted from list");
+        }
+        else if(last.value==key)
         {
             previous.next = last.next;
             System.out.println(key + " is deleted from list");
@@ -57,13 +62,21 @@ public class LinkedList_algo
     }
     public static void printList(LinkedList_algo list)
     {
-        Node last = list.Head;
-        while(last.next!=null)
+        if(list.Head == null)
         {
-            System.out.print(last.value+" ");
-            last = last.next;
+            System.out.println("Empty list");
         }
-        System.out.println(last.value);
+        else
+        {
+            System.out.print("List : ");
+            Node last = list.Head;
+            while(last.next!=null)
+            {
+                System.out.print(last.value+" ");
+                last = last.next;
+            }
+            System.out.println(last.value);
+        }
     }
     public static void main(String[] args) {
         LinkedList_algo list = new LinkedList_algo();
