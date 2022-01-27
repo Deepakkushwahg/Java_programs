@@ -36,6 +36,11 @@ public class LinkedList_algo
         int f=0;
         Node last = list.Head;
         Node previous = list.Head;
+        if(list.Head==null)
+        {
+            System.out.println("LinkedList is empty you can\'t delete");
+            return list;
+        }
         while(last.value != key && last.next!=null)
         {
             previous = last;
