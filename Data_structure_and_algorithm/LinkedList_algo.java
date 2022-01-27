@@ -75,12 +75,11 @@ public class LinkedList_algo
         {
             System.out.print("List : ");
             Node last = list.Head;
-            while(last.next!=null)
+            while(last!=null)
             {
                 System.out.print(last.value+" ");
                 last = last.next;
             }
-            System.out.println(last.value);
         }
     }
     public static void main(String[] args) {
@@ -94,7 +93,7 @@ public class LinkedList_algo
             list = Insert(list,sc.nextInt());
         }
         printList(list);
-        System.out.println("Enter the value which you want to deleted from list");
+        System.out.println("\nEnter the value which you want to deleted from list");
         int key = sc.nextInt();
         list = Deleted(list,key);
         printList(list);
