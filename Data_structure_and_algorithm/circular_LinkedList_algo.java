@@ -1,6 +1,6 @@
 package Data_structure_and_algorithm;
 
-// algo of Insertion and Deletion in the circular LinkedList
+// algo of Insertion at End and Deletion by value in the circular LinkedList
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class circular_LinkedList_algo
             value = data;
         }
     }
-    public static circular_LinkedList_algo Insert(circular_LinkedList_algo list, int value)
+    public static circular_LinkedList_algo InsertAtEnd(circular_LinkedList_algo list, int value)
     {
         Node NewNode = new Node(value);
         if(list.head == null)
@@ -24,17 +24,17 @@ public class circular_LinkedList_algo
             list.head = NewNode;
             list.head.next = list.head;
         }
-        Node last = list.head;
-        while(last.next != list.head)
-            last = last.next;
-        if(last.next == list.head)
+        else
         {
+            Node last = list.head;
+            while(last.next != list.head)
+                last = last.next;
             last.next = NewNode;
-            last.next.next = list.head;
+            NewNode.next = list.head;
         }
         return list;
     }
-    public static circular_LinkedList_algo Deletion(circular_LinkedList_algo list, int key)
+    public static circular_LinkedList_algo DeletionByValue(circular_LinkedList_algo list, int key)
     {
         int f=0;
         Node last = list.head;
@@ -95,11 +95,11 @@ public class circular_LinkedList_algo
         int size = sc.nextInt();
         System.out.println("Enter the Elements of LinkedList");
         for(int i=0;i<size;i++)
-            list = Insert(list, sc.nextInt());
+            list = InsertAtEnd(list, sc.nextInt());
         printList(list);
         System.out.print("Enter the value which you want to delete: ");
         int key = sc.nextInt();
-        list = Deletion(list,key);
+        list = DeletionByValue(list,key);
         printList(list);
     }
 }
