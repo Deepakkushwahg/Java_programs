@@ -12,7 +12,10 @@ class Stack1 {
 
         return (top < 0);
     }
-
+    boolean isFull()
+    {
+        return top==MAX-1;
+    }
     Stack1()
     {
 
@@ -73,6 +76,7 @@ public class stack_example
         System.out.println(s.isEmpty());
         System.out.println(s.pop() + " Popped from stack");
         System.out.println("Top element is :" + s.peek());
+        System.out.println(s.isFull());
         System.out.print("Elements present in stack :");
         s.print();
     }
