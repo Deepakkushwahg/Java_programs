@@ -1,21 +1,21 @@
 import java.util.Scanner;
-class inputfabbo
+class inputfibo
 {
 	int a,b,c,n;
-	inputfabbo()
+	inputfibo()
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the Limit: ");
 		n=sc.nextInt();
 	}
 }
-class fabbonacai_series extends inputfabbo
+class fibonacci_series extends inputfibo
 {
 	void display()
 	{
 		a=0;
 		b=1;
-		System.out.println("Fabbonacai series is");
+		System.out.println("fibonacci series is");
 		System.out.print(a);
 		while(n-1>0)
 		{
@@ -28,7 +28,7 @@ class fabbonacai_series extends inputfabbo
 	}
 	public static void main(String arg[])
 	{
-		fabbonacai_series obj = new fabbonacai_series();
+		fibonacci_series obj = new fibonacci_series();
 		obj.display();
 	}
 }
