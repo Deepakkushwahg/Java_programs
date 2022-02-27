@@ -5,44 +5,53 @@ import java.util.Scanner;
 // implementation of queue by array
 public class _queue
 {
-    int Front,Rear,maxsize;
-    int q[];
-    _queue(int maxSize)
+    static int Front,Rear,maxsize;
+    static int q[];
+    _queue()
     {
-        Front = 0;
-        Rear = 0;
-        this.maxsize = maxSize;
-        q = new int[maxSize];
+        Front = -1;
+        Rear = -1;
+        q = new int[maxsize];
     }
     boolean isEmpty()
     {
-        return Front==0;
+        return Front==-1;
     }
     boolean isFull()
     {
-        return Rear==maxsize;
+        return Rear==maxsize-1;
     }
     void enqueue(int data)
     {
-        if(Rear==maxsize)
+        if(isFull())
             System.out.println("queue Overflow");
+        else if(isEmpty())
+        {
+            Front++;
+            Rear++;
+            q[Rear] = data;
+        }
         else
         {
-            q[Rear] = data;
             Rear++;
+            q[Rear] = data;
         }
     }
     int dequeue()
     {
-        if(Front==Rear)
+        if(isEmpty())
         {
             System.out.println("queue underflow");
             return -1;
         }
         int x = q[Front];
-        for(int i=0;i<Rear;i++)
-            q[i]=q[i+1];
-        Rear--;
+        if(Front==Rear)
+        {
+            Front = -1;
+            Rear = -1;
+            return x;
+        }
+        Front++;
         return x;
     }
     int front()
@@ -51,19 +60,25 @@ public class _queue
     }
     int rear()
     {
-        return q[Rear-1];
+        return q[Rear];
+    }
+    public static void PrintQueue()
+    {
+        for(int i=Front;i<=Rear;i++)
+            System.out.print(q[i]+" ");
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the size of queue: ");
-        _queue ls = new _queue(sc.nextInt());
-        ls.enqueue(10);
-        ls.enqueue(20);
-        ls.enqueue(30);
-        ls.enqueue(40);
+        maxsize = sc.nextInt();
+        _queue ls = new _queue();
+        System.out.println("Enter the Elements");
+        for (int i=0;i<maxsize;i++)
+            ls.enqueue(sc.nextInt());
         System.out.println(ls.dequeue());
         System.out.println(ls.front());
         System.out.println(ls.rear());
         System.out.println(ls.dequeue());
+        PrintQueue();
     }
 }

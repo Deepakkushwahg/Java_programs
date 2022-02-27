@@ -81,7 +81,7 @@ public class reverse_string_using_stack
         int size = st.size();
         for(int i=0;i<size;i++)
         {
-            str = str+Character.toString(st.pop());
+            str = str+st.pop();
         }
         System.out.println(str);
     }
