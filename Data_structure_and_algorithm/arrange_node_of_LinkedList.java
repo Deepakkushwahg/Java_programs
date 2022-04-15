@@ -62,8 +62,13 @@ public class arrange_node_of_LinkedList
             }
             temp = temp.next;
         }
-        evenTail.next = oddHead;
-        head = evenHead;
+        if(oddHead==null)
+            head = evenHead;
+        else
+        {
+            oddTail.next = evenHead;
+            head = oddHead;
+        }
     }
     static void PrintLinkedList()
     {
@@ -90,7 +95,9 @@ public class arrange_node_of_LinkedList
         {
             Insertion(sc.nextInt());
         }
-        ArrangingNodes();
+        if(head!=null && head.next!=null)
+            ArrangingNodes();
+        System.out.println("LinkedList after arranging the Nodes");
         PrintLinkedList();
     }
 }
