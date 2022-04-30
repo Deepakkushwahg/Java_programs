@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.Graph_data_structure;
 
 // A Java program for Dijkstra's single source shortest path algorithm.
 // The program is for adjacency matrix representation of the graph

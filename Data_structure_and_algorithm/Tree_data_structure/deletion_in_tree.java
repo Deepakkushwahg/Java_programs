@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.Tree_data_structure;
 
 // implementation of insertion according to sorted element and deletion of element from that tree
 import java.util.Scanner;
