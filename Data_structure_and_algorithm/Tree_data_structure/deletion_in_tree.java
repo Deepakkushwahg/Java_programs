@@ -26,7 +26,7 @@ public class deletion_in_tree
         }
         if(parentNode.data>x)
             parentNode.left = Insertion(parentNode.left,x);
-        else
+        else if(parentNode.data<x)
         {
             parentNode.right = Insertion(parentNode.right,x);
         }
@@ -82,6 +82,7 @@ public class deletion_in_tree
         System.out.print("Enter the element which you want to delete from tree: ");
         int value = sc.nextInt();
         root = deletion(root,value);
+        System.out.println("Modified BST");
         PrintInOrder(root);
     }
 }

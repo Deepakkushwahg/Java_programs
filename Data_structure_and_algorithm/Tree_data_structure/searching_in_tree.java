@@ -25,7 +25,7 @@ public class searching_in_tree
         }
         if(parentNode.data>x)
             parentNode.left = Insertion(parentNode.left,x);
-        else
+        else if(parentNode.data<x)
             parentNode.right = Insertion(parentNode.right,x);
         return parentNode;
     }
