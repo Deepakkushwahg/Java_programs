@@ -9,35 +9,42 @@ public class valid_parenthesis {
     {
         if(str.isEmpty())
             return true;
-        else
+        if(str.length()%2 != 0){
+            return false;
+        }
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < str.length(); i++)
         {
-            Stack<Character> stack = new Stack<>();
-            for (int i = 0; i < str.length(); i++)
+            char current = str.charAt(i);
+            if (current == '(' || current == '[' || current == '{')
             {
-                char current = str.charAt(i);
-                if (current == '(' || current == '[' || current == '{')
+                stack.push(current);
+            }
+            else
+            {
+                if(stack.isEmpty())
                 {
-                    stack.push(current);
+                    return false;
+                }
+                char peekChar = stack.peek();
+                if ((current == ')' && peekChar != '(') || (current == '}' && peekChar != '{') || (current == ']' && peekChar != '['))
+                {
+                    return false;  // for a valid input, a close brackets must have an open brackets
                 }
                 else
                 {
-                    if(stack.isEmpty())
-                    {
-                        return false;
-                    }
-                    char peekChar = stack.peek();
-                    if ((current == ')' && peekChar != '(') || (current == '}' && peekChar != '{') || (current == ']' && peekChar != '['))
-                    {
-                        return false;  // for a valid input, a close brackets must have an open brackets
-                    }
-                    else
-                    {
-                        stack.pop();
-                    }
+                    stack.pop();
                 }
             }
+        }
+        if(stack.isEmpty())
+        {
             return true;
         }
+        if(stack.peek() == '(' || stack.peek() == '[' || stack.peek() == '{'){
+            return false;
+        }
+        return true;
     }
     public static void main(String[] args) {
         valid_parenthesis obj = new valid_parenthesis();
