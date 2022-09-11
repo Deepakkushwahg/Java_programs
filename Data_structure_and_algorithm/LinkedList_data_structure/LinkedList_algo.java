@@ -31,6 +31,7 @@ public class LinkedList_algo
         }
         return list;
     }
+    // Delete first Occurrence of key
     public static LinkedList_algo Deleted(LinkedList_algo list, int key)
     {
         int f=0;
