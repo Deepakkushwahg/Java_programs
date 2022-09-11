@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.LinkedList_data_structure;
 
 // algo of Insertion at End and Deletion by value in the circular LinkedList
 

@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.LinkedList_data_structure;
 
 // algo of insertion at specify position in LinkedList
 import java.util.Scanner;

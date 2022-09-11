@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.LinkedList_data_structure;
 
 // implementation of queue by LinkedList
 public class queue

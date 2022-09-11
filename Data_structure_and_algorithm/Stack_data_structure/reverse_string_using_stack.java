@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.Stack_data_structure;
 
 // Reverse a string using stack by implementing stack class
 

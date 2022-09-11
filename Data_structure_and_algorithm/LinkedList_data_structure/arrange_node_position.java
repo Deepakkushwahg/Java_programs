@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.LinkedList_data_structure;
 
 // arrange the node of odd positions in one side and even position in another side
 import java.util.Scanner;

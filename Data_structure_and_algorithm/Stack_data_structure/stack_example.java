@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.Stack_data_structure;
 
 /* Java program to implement basic stack
 operations */

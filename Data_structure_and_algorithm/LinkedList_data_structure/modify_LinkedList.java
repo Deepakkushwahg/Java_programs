@@ -3,7 +3,7 @@
 // ii) Reverse the Extracted List.
 // iii) Append the extracted List at the end of original List.
 
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.LinkedList_data_structure;
 import java.util.Scanner;
 import java.util.Stack;
 

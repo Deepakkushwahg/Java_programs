@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.LinkedList_data_structure;
 
 // algo of insertion at beginning in Doubly LinkedList
 import java.util.Scanner;

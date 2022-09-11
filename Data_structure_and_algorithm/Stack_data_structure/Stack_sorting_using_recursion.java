@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.Stack_data_structure;
 
 import java.util.Scanner;
 import java.util.Stack;

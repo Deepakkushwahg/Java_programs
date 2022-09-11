@@ -1,4 +1,4 @@
-package Data_structure_and_algorithm;
+package Data_structure_and_algorithm.Stack_data_structure;
 
 public class stack_implementation_using_LinkedList {
     static Node Top;
