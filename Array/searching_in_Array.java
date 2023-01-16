@@ -20,18 +20,15 @@ public class searching_in_Array
     }
     void searchingNumber()
     {
-        int f=0;
         for (int i=0;i<size;i++)
         {
             if(n==arr[i])
             {
                 System.out.println("Number is present in Array at "+(i+1)+" position and index no. is "+i);
-                f=1;
-                break;
+                return;
             }
         }
-        if(f==0)
-            System.out.println("Number is not present in Array");
+        System.out.println("Number is not present in Array");
     }
     public static void main(String[] args) {
         new searching_in_Array().searchingNumber();
