@@ -47,7 +47,7 @@ public class graph_using_hashmap {
     }
 
     public void display(){
-        System.out.println("Graph representaion\n");
+        System.out.println("Graph representation\n");
         for(int key : map.keySet()){
             System.out.println(key +"--->"+ map.get(key));
         }
