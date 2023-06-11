@@ -1,6 +1,7 @@
 package Data_structure_and_algorithm.Graph_data_structure;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class graph_using_hashmap {
@@ -52,6 +53,31 @@ public class graph_using_hashmap {
         }
     }
 
+    public boolean hasPath(int src, int dest, HashSet<Integer> visited){
+        if(src==dest) return true;
+        visited.add(src);
+        for(int nbrs : map.get(src).keySet()){
+            if(!visited.contains(nbrs) && hasPath(nbrs, dest, visited)){
+                return true;
+            }
+        }
+        visited.remove(src);
+        return false;
+    }
+
+    public void printAllPath(int src, int dest, HashSet<Integer> visited, String ans){
+        if(src==dest){
+            System.out.println(ans+src);
+            return;
+        }
+        visited.add(src);
+        for(int nbr : map.get(src).keySet()){
+            if(!visited.contains(nbr)){
+                printAllPath(nbr, dest, visited, ans+src+" ");
+            }
+        }
+        visited.remove(src);
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of vertices");
